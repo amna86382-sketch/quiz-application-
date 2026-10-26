@@ -115,7 +115,7 @@ const savedResultsElement = document.getElementById("savedResults");
 // Starting values
 let currentQuestion = 0;
 let score = 0;
-let answered = false;
+let answered =[] ;
 // Purane results localStorage se lena
 let quizResults = JSON.parse(
     localStorage.getItem("quizResults")
