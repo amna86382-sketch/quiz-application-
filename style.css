@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff1f2, #ffd6d6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.quiz-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(180, 30, 50, 0.15);
+}
+h1 {
+    text-align: center;
+    color: #c1121f;
+    margin-bottom: 25px;
+}
+#questionNumber {
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+h2 {
+    color: #333333;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.option-btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #f2c6c9;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333333;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.option-btn:hover {
+    background: #fff1f2;
+    border-color: #e63946;
+}
+/* Sahi answer - light green */
+.correct {
+    background: #d8f3dc;
+    border-color: #74c69d;
+    color: #1b4332;
+}
+/* Ghalat answer - light red */
+.wrong {
+    background: #f8d7da;
+    border-color: #f1aeb5;
+    color: #842029;
+}
+#message {
+    margin: 10px 0;
+    font-weight: bold;
+}
+#nextBtn,
+#restartBtn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #d62828;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#nextBtn:hover,
+#restartBtn:hover {
+    background: #a4161a;
+}
+#result {
+    display: none;
+    text-align: center;
+}
+
+#finalScore {
+    color: #c1121f;
+    font-size: 20px;
+    margin: 20px 0;
+}
+.saved-result {
+    border-top: 1px solid #f2c6c9;
+    margin-top: 25px;
+    padding-top: 15px;
+}
+.saved-result h3 {
+    color: #c1121f;
+    margin-bottom: 10px;
+}
+.result-card {
+    background: #fff1f2;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #e63946;
+}
+.result-card p {
+    margin: 5px 0;
+    color: #333333;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .option-btn {
+        font-size: 14px;
+    }
+}
