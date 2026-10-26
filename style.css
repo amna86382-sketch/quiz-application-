@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #fff1f2, #ffd6d6);
@@ -12,6 +13,7 @@ body {
     align-items: center;
     padding: 20px;
 }
+
 .quiz-container {
     background: #ffffff;
     width: 100%;
@@ -20,21 +22,25 @@ body {
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(180, 30, 50, 0.15);
 }
+
 h1 {
     text-align: center;
     color: #c1121f;
     margin-bottom: 25px;
 }
+
 #questionNumber {
     color: #e63946;
     font-weight: bold;
     margin-bottom: 12px;
 }
+
 h2 {
     color: #333333;
     font-size: 21px;
     margin-bottom: 20px;
 }
+
 .option-btn {
     width: 100%;
     padding: 12px;
@@ -48,26 +54,31 @@ h2 {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .option-btn:hover {
     background: #fff1f2;
     border-color: #e63946;
 }
-/* Sahi answer - light green */
+
+/* Sahi answer */
 .correct {
     background: #d8f3dc;
     border-color: #74c69d;
     color: #1b4332;
 }
-/* Ghalat answer - light red */
+
+/* Ghalat answer */
 .wrong {
     background: #f8d7da;
     border-color: #f1aeb5;
     color: #842029;
 }
+
 #message {
     margin: 10px 0;
     font-weight: bold;
 }
+
 #nextBtn,
 #restartBtn {
     width: 100%;
@@ -81,10 +92,12 @@ h2 {
     cursor: pointer;
     transition: 0.3s;
 }
+
 #nextBtn:hover,
 #restartBtn:hover {
     background: #a4161a;
 }
+
 #result {
     display: none;
     text-align: center;
@@ -95,27 +108,59 @@ h2 {
     font-size: 20px;
     margin: 20px 0;
 }
+
 .saved-result {
     border-top: 1px solid #f2c6c9;
     margin-top: 25px;
     padding-top: 15px;
 }
+
 .saved-result h3 {
     color: #c1121f;
     margin-bottom: 10px;
 }
+
+/* Saved result card */
 .result-card {
     background: #fff1f2;
     padding: 12px;
     margin-top: 10px;
     border-radius: 8px;
     border-left: 4px solid #e63946;
+
+    /* Score aur Delete button ek line mein */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
 }
+
 .result-card p {
     margin: 5px 0;
     color: #333333;
     overflow-wrap: anywhere;
 }
+
+/* Delete button */
+.delete-btn {
+    background: #d62828;
+    color: #ffffff;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background: #a4161a;
+    box-shadow: 0 3px 8px rgba(180, 30, 50, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
 @media (max-width: 480px) {
     .quiz-container {
         padding: 18px;
@@ -127,5 +172,15 @@ h2 {
 
     .option-btn {
         font-size: 14px;
+    }
+
+    .result-card {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .delete-btn {
+        padding: 8px 10px;
+        font-size: 13px;
     }
 }
